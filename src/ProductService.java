@@ -40,7 +40,7 @@ public class ProductService {
             String type = p.getType().toLowerCase();
             String place = p.getPlace().toLowerCase();
             if(name.contains(text) || type.contains(text) || place.contains(text))
-                prods.add(p);
+                 prods.add(p);
         }
 
         return prods;
