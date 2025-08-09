@@ -17,35 +17,19 @@ public class ProductService {
     }
 
     public Product getProduct(String name){
-        for(Product p : products){
-            if(p.getName().equals(name))
-                return p;
-        }
+        return db.getProduct(name);
 
-        return null;
     }
 
     public List<Product> getByPlace(String name){
-        List<Product> result = new ArrayList<>();
-        for(Product p : products){
-            if(p.getPlace().equalsIgnoreCase(name))
-                result.add(p);
-        }
-        return result;
+        return db.getByPlace(name);
+
     }
 
     public List<Product> getProductWithText(String str){
         String text = str.toLowerCase();
         List<Product> prods = new ArrayList<>();
 
-        for(Product p : products){
-            String name = p.getName().toLowerCase();
-            String type = p.getType().toLowerCase();
-            String place = p.getPlace().toLowerCase();
-            if(name.contains(text) || type.contains(text) || place.contains(text))
-                 prods.add(p);
-        }
-
-        return prods;
+        return db.getByText(text);
     }
 }

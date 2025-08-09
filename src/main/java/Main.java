@@ -23,26 +23,26 @@ public class Main {
         }
         System.out.println("=====================================================================================================");
 //
-//        System.out.println("A particular product");
+        System.out.println("A particular product");
+
+        Product p = service.getProduct("Redmi Y1");
+        System.out.println(p);
+
+        System.out.println("=====================================================================================================");
 //
-//        Product p = service.getProduct("Redmi Y1");
-//        System.out.println(p);
-//
-//        System.out.println("=====================================================================================================");
-//
-//        System.out.println("Get product by its place");
-//        List<Product> p1 = service.getByPlace("Drawer");
-//        for(Product p2 : p1){
-//            System.out.println(p2);
-//        }
-//
-//        System.out.println("=====================================================================================================");
-//        System.out.println("A particular text");
-//
-//        List<Product> prods = service.getProductWithText("brown");
-//        for(Product product : prods){
-//            System.out.println(product);
-//        }
+        System.out.println("Get product by its place");
+        List<Product> p1 = service.getByPlace("Drawer");
+        for(Product p2 : p1){
+            System.out.println(p2);
+        }
+
+        System.out.println("=====================================================================================================");
+        System.out.println("A particular text");
+
+        List<Product> prods = service.getProductWithText("brown");
+        for(Product product : prods){
+            System.out.println(product);
+        }
 
     }
 }
